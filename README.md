@@ -34,7 +34,7 @@ The app offers in-depth analytics and reporting features, enabling musicians to 
 - 
 ## Challenges
 
-- **Prototype Mode**: Some sections of the application are in prototype mode and are not fully functional. While the dashboard is fully functional, other parts like the Music Streams section and login functionality are still under development.
+- **Prototype Mode**: Some sections of the application are in prototype mode and are not fully functional. While the login, dashboard and Music stream is functional, other parts like the Playlists, settings etc section are still under development.
 - **Integration Complexity**: Integrating with external APIs, such as the Spotify API, presents challenges in data retrieval and synchronization. Ensuring seamless integration and data accuracy is an ongoing challenge.
 
 ## Usage
