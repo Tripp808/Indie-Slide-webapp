@@ -1,43 +1,44 @@
-import { ColorModeContext, useMode } from "./theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import React, { useState, useEffect } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
-import { Routes, Route } from "react-router-dom";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/Dashboard";
-// import Team from "./scenes/team";
-// import Contacts from "./scenes/contacts";
-// import Invoices from "./scenes/invoices";
-// import Bar from "./scenes/Bar";
-// import Form from "./scenes/form";
-// import Line from "./scenes/line";
-// import Pie from "./scenes/pie";
-// import FAQ from "./scenes/faq";
-// import Geography from "./scenes/geography";
-// import Calendar from "./scenes/calendar";
+import SignInSide from "./components/login";
+import { auth } from "./firebase";
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ColorModeContext, useMode } from "./theme";
 
 function App() {
   const [theme, colorMode] = useMode();
+  const [isSidebar, setIsSidebar] = useState(true);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+
+    // Explicitly sign out user on component mount
+    auth.signOut();
+
+    return () => unsubscribe();
+  }, []);
 
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-          <main className="content">
-            <Topbar />
-            <Routes></Routes>
-            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-            {/* <Route path="/team" element={<Team />} /> */}
-            {/* <Route path="/contacts" element={<Contacts />} /> */}
-            {/* <Route path="/invoices" element={<Invoices />} /> */}
-            {/* <Route path="/form" element={<Form />} /> */}
-            {/* <Route path="/bar" element={<Bar />} /> */}
-            {/* <Route path="/pie" element={<Pie />} /> */}
-            {/* <Route path="/line" element={<Line />} /> */}
-            {/* <Route path="/faq" element={<FAQ />} /> */}
-            {/* <Route path="/geography" element={<Geography />} /> */}
-            {/* <Route path="/calendar" element={<Calendar />} /> */}
-          </main>
+          {user && <Sidebar isSidebar={isSidebar} />}
+          <div className="content-wrapper">
+            {user && <Topbar setIsSidebar={setIsSidebar} />}
+            <main className="content">
+              <Routes>
+                {!user && <Route path="/" element={<SignInSide />} />}
+                {user && <Route path="/" element={<Dashboard />} />}
+              </Routes>
+            </main>
+          </div>
         </div>
       </ThemeProvider>
     </ColorModeContext.Provider>
