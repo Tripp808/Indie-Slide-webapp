@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Sidebar from "./scenes/global/Sidebar";
 import Dashboard from "./scenes/Dashboard";
+import MusicStreams from "./scenes/MusicStreams"; // Import MusicStreams component
 import SignInSide from "./components/login";
 import { auth } from "./firebase";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -35,7 +36,16 @@ function App() {
             <main className="content">
               <Routes>
                 {!user && <Route path="/" element={<SignInSide />} />}
-                {user && <Route path="/" element={<Dashboard />} />}
+                {user && (
+                  <>
+                    <Route path="/" element={<Dashboard />} />
+                    <Route
+                      path="/music-streams"
+                      element={<MusicStreams />}
+                    />{" "}
+                    {/* New route for MusicStreams */}
+                  </>
+                )}
               </Routes>
             </main>
           </div>

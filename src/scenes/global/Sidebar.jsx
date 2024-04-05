@@ -122,15 +122,16 @@ const ProSidebar = () => {
                 },
               }}
             >
-              <Typography
-                style={{
-                  color: colors.grey ? colors.grey[100] : "#fff", // Fallback color
-                  fontFamily: "cursive",
-                }}
-              >
-                {item.title}
-              </Typography>
-              <Link to={item.to} />
+              <Link to={item.to}>
+                <Typography
+                  style={{
+                    color: colors.grey ? colors.grey[100] : "#fff", // Fallback color
+                    fontFamily: "cursive",
+                  }}
+                >
+                  {item.title}
+                </Typography>
+              </Link>
             </MenuItem>
           ))}
         </Menu>
