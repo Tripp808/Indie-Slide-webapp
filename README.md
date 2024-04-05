@@ -31,6 +31,11 @@ The app offers in-depth analytics and reporting features, enabling musicians to 
 - **Material UI**: A popular React UI framework that provides pre-designed components and styles for rapid application development.
 - **Firebase**: A comprehensive platform that offers various services, including authentication, database, and hosting. Firebase authentication ensures secure user authentication and access control.
 - **Spotify API**: The Spotify API is leveraged to fetch musician data, track information, and streaming statistics. It provides access to a vast database of music-related information for comprehensive analytics.
+- 
+## Challenges
+
+- **Prototype Mode**: Some sections of the application are in prototype mode and are not fully functional. While the dashboard is fully functional, other parts like the Music Streams section and login functionality are still under development.
+- **Integration Complexity**: Integrating with external APIs, such as the Spotify API, presents challenges in data retrieval and synchronization. Ensuring seamless integration and data accuracy is an ongoing challenge.
 
 ## Usage
 
