@@ -5,7 +5,7 @@
 Indie Slide is a comprehensive web application built with React and Material UI, aimed at providing musicians with detailed analytics and insights to enhance their music strategy. The app features a user-friendly dashboard interface that enables musicians to visualize their streaming data, revenue, and track information, all in one place.
 
 ## Access
-
+Visit the site here: https://indie-slide-webapp-69kp-mdqcvwe88-tripp808s-projects.vercel.app/
 To access the application, use the following login credentials:
 - **Email**: ocheankeli99@gmail.com
 - **Password**: BSE101
