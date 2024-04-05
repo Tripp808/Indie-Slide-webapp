@@ -2,7 +2,8 @@
 
 ## Overview
 
-Indie Slide is a comprehensive web application built with React and Material UI, aimed at providing musicians with detailed analytics and insights to enhance their music strategy. The app features a user-friendly dashboard interface that enables musicians to visualize their streaming data, revenue, and track information, all in one place.
+Indie Slide is a comprehensive web application built with React and Material UI, aimed at providing musicians with detailed analytics and insights to enhance their music strategy. The app features a user-friendly dashboard interface that enables musicians to visualize their streaming data, revenue, and track information, all in one place. 
+Link to SRS document: https://docs.google.com/document/d/1o9s-7yi1sgdYzLadAFV02QUs6QWBj3cOtSGcK7utosc/edit?usp=sharing
 
 ## Access
 Visit the site here: https://indie-slide-webapp-69kp-mdqcvwe88-tripp808s-projects.vercel.app/
