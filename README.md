@@ -6,7 +6,7 @@ Indie Slide is a comprehensive web application built with React and Material UI,
 Link to SRS document: https://docs.google.com/document/d/1o9s-7yi1sgdYzLadAFV02QUs6QWBj3cOtSGcK7utosc/edit?usp=sharing
 
 ## Access
-Visit the site here: https://indie-slide-webapp-69kp-mdqcvwe88-tripp808s-projects.vercel.app/
+Visit the site here: https://indie-slide-webapp-69kp.vercel.app/
 To access the application, use the following login credentials:
 - **Email**: ocheankeli99@gmail.com
 - **Password**: BSE101
